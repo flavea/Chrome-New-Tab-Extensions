@@ -1,0 +1,32 @@
+{
+    "HLROptions3": {
+        "image": "../images/4.jpg",
+        "color1": "000000",
+        "color2": "eaeaea",
+        "backgroundPosition": "150px",
+        "twitter": "https://twitter.com/_kittensoo/lists/fandom-updates?ref_src=twsrc%5Etfw",
+        "showHistory": true,
+        "grayScale": true,
+        "timeFormat": 12,
+        "dateFormat": 1,
+        "links": [{
+            "text": "twitter",
+            "link": "https://twitter.com"
+        }, {
+            "text": "facebook",
+            "link": "https://facebook.com"
+        }, {
+            "text": "tumblr",
+            "link": "https://tumblr.com"
+        }, {
+            "text": "youtube",
+            "link": "https://youtube.com"
+        }, {
+            "text": "spotify",
+            "link": "https://open.spotify.com"
+        }, {
+            "text": "linkedin",
+            "link": "https://linkedin.com"
+        }]
+    }
+}

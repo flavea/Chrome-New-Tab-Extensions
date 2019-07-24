@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>New Tab Setting</title>
+    <link rel="shortcut icon" href="images/icon128.png">
+    <name="author" content="hellolittlered.org" />
+    <link href="css/css.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/option.js"></script>
+    <script src="js/jscolor.js"></script>
+</head>
+
+<body>
+    <div id="options">
+        <h1>New Tab Settings</h1>
+
+        <p><label>Twitter List</label> <input type="text" id="twitter"></p>
+        <p><label>Image</label> <input type="text" id="image"></p>
+        <p><label>Image Position</label> <input type="text" id="backgroundPost"></p>
+        <p><label>Color #1</label> <input class="jscolor" value="fd1061" id="color1"></p>
+        <p><label>Color #2</label> <input class="jscolor" value="3ac0ef" id="color2"></p>
+
+        <p>
+            <label>Time Format</label>
+            <select id="time">
+                <option value="12">12 Hours (AM-PM)</option>
+                <option value="24">24 Hours</option>
+            </select>
+        </p>
+
+        <p>
+            <label>Date Format</label>
+            <select id="date">
+                <option value="1">Day, Month Date Year</option>
+                <option value="2">Day, Date Month Year</option>
+            </select>
+        </p>
+
+        <p>
+            <label>
+                <input type="checkbox" id="optHistory" value="true">
+                Show History
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" id="optGrayscale" value="true">
+                Grayscale Images
+            </label>
+        </p>
+
+        <h1>Links</h1>
+        <p><button id="addLink">Add New Link</button></p>
+        <div id="optLinks">
+            <fieldset class="linkTemp">
+                <legend>Link 1</legend>
+                <p><label>Text</label> <input type="text" class="text" value=""></p>
+                <p><label>Link</label> <input type="text" class="link" value=""></p>
+                <button class="delete">Delete This Link</button>
+            </fieldset>
+        </div>
+
+        <div id="buttons">
+            <button id="save">Save</button>
+            <button id="export">Back Up Setting</button>
+            <button id="import">Import Setting</button>
+            <input type="file" id="importFile" style="display: none" accept=".json">
+        </div>
+    </div>
+
+</body>
+
+</html>

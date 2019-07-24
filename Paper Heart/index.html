@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>New Tab</title>
+	<link rel="shortcut icon" href="images/icon128.png">
+	<name="author" content="hellolittlered.org" />
+	<link href="https://fonts.googleapis.com/css?family=Arimo|Rubik" rel="stylesheet">
+	<link href="css/css.css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+    <script src="js/dateformat.min.js"></script>
+</head>
+
+<body>
+	
+	<button id="go-options"><i class="fas fa-cog"></i> Setting</button>
+
+	<div id="header">
+		<h1>00:00:00</h1>
+		<span>Senin, 1 Januari 1990</span>
+	</div>
+
+	<div id="nav">
+		<div id="links">
+			<a href="http://twitter.com"><b>01 <span></span> </b> Twitter</a>
+		</div>
+	</div>
+
+	<div id="content">
+		<div id="posts">
+			<div class="post">
+				<div class="info">
+					<a target="twitter" class="active twitButton" style="display: none">Twitter</a>
+					<a target="history" class="historyButton" style="display: none">History</a>
+				</div>
+
+				<div id="twitter" class="ccontent" style="display: none">
+					<div class="twitter-inside">
+						<a class="twitter-timeline" data-chrome="nofooter noborders noheader transparent"
+							data-tweet-limit="10" style="font-size: .2em"></a>
+						<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</div>
+				</div>
+
+				<div id="history" class="ccontent" style="display: none">
+					<input type="text" placeholder="Search History" id="searchHistory">
+					<a class="historyTemp">
+						<h3></h3>
+						<span></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
