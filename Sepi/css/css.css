@@ -1,0 +1,133 @@
+.dark {
+	--color-1: #000000;
+	--color-2: #ffffff;
+}
+
+.light {
+	--color-1: #ffffff;
+	--color-2: #000000;
+}
+
+::selection {
+	background: var(--color-2);
+	color: var(--color-1);
+}
+
+body {
+	background: var(--color-1);
+	font-size: 1em;
+	font-family: 'Rubik', 'Arial', sans-serif;
+	color: var(--color-2);
+}
+
+a {
+	color: var(--color-2);
+	text-decoration: none;
+}
+
+#content {
+	position: fixed;
+	top: 2em;
+	left: 2em;
+	width: calc(100% - 4em - 2px);
+	height: calc(100% - 4em - 2px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border: 1px solid var(--color-2);
+	text-align: center;
+}
+
+#header h1 {
+	font-size: 3em;
+	line-height: 0;
+}
+
+#links {
+	display: block;
+	margin-top: 2em;
+	font-size: 1.5em;
+	width: 200px;
+}
+
+#links span {
+	display: inline-block;
+	width: 2em;
+	text-align: center;
+	line-height: 2em;
+}
+
+#options {
+	font-size: 14px;
+	background: var(--color-1);
+	padding: 40px;
+	width: 60%;
+	margin: auto;
+	color: var(--color-2);
+}
+
+#options h1 {
+	font-weight: bold;
+	margin: 10px 0;
+	padding: 10px 0;
+}
+
+#options label {
+	min-width: 100px;
+	display: inline-block;
+	font-weight: bold
+}
+
+#options>#optLinks>.link {
+	width: 45%;
+	display: inline-block;
+	margin: 0 10px 10px 0;
+}
+
+#options input[type="text"], #options select {
+	display: inline-block;
+	width: calc(100% - 120px)
+}
+
+#options .linkTemp {
+	display: none
+}
+
+#options a {
+	color: var(--color-2);
+	text-decoration: underline;
+	opacity: .8
+}
+
+#go-options {
+	background: var(--color-2);
+	border: none;
+	color: var(--color-1);
+	padding: 10px 11px;
+	position: fixed;
+	top: 50px;
+	right: 50px;
+	font-family: 'Rubik', 'Arial', sans-serif;
+	border-radius: 20px;
+	font-size: 12px;
+	cursor: pointer;
+	z-index: 88;
+}
+
+#buttons {
+	text-align: center;
+	position: fixed;
+	z-index: 999;
+	bottom: 10px;
+	right: 10px;
+	background: rgba(0, 0, 0, .5);
+	padding: 10px;
+	border-radius: 10px;
+}
+
+@media (max-width: 801px) {
+	#options>#optLinks>.link {
+		width: 100%;
+	}
+}

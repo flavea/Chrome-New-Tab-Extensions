@@ -1,0 +1,26 @@
+{
+    "HLROptions2": {
+        "scheme": "light",
+        "timeFormat": 12,
+        "dateFormat": 1,
+        "links": [{
+            "icon": "<i class='fab fa-twitter'></i>",
+            "link": "https://twitter.com"
+        }, {
+            "icon": "<i class='fab fa-facebook-f'></i>",
+            "link": "https://facebook.com"
+        }, {
+            "icon": "<i class='fab fa-tumblr'></i>",
+            "link": "https://tumblr.com"
+        }, {
+            "icon": "<i class='fab fa-youtube'></i>",
+            "link": "https://youtube.com"
+        }, {
+            "icon": "<i class='fab fa-spotify'></i>",
+            "link": "https://open.spotify.com"
+        }, {
+            "icon": "<i class='fab fa-linkedin'></i>",
+            "link": "https://linkedin.com"
+        }]
+    }
+}
