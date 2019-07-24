@@ -1,0 +1,38 @@
+{
+    "HLROptions": {
+        "name": "",
+        "image": "../images/sb.jpg",
+        "color1": "FD1061",
+        "color2": "3AC0EF",
+        "color3": "E9CC80",
+        "onlineStatus": true,
+        "showQuote": true,
+        "timeFormat": 12,
+        "dateFormat": 1,
+        "links": [{
+            "icon": "<i class='fab fa-twitter'></i>",
+            "text": "twitter",
+            "link": "https://twitter.com"
+        }, {
+            "icon": "<i class='fab fa-facebook-f'></i>",
+            "text": "facebook",
+            "link": "https://facebook.com"
+        }, {
+            "icon": "<i class='fab fa-tumblr'></i>",
+            "text": "tumblr",
+            "link": "https://tumblr.com"
+        }, {
+            "icon": "<i class='fab fa-youtube'></i>",
+            "text": "youtube",
+            "link": "https://youtube.com"
+        }, {
+            "icon": "<i class='fab fa-spotify'></i>",
+            "text": "spotify",
+            "link": "https://open.spotify.com"
+        }, {
+            "icon": "<i class='fab fa-linkedin'></i>",
+            "text": "linkedin",
+            "link": "https://linkedin.com"
+        }]
+    }
+}
