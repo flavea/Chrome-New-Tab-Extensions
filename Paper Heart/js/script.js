@@ -11,11 +11,11 @@ function time() {
 function processSetting(options) {
 	let root = document.documentElement
 
-	root.style.setProperty('--color-1', `#${options.color1}`)
-	root.style.setProperty('--color-2', `#${options.color2}`)
-
-	$("#name").text(`Welcome, ${options.name}`)
-	if (options.image != '') $("body").css("background-image", `url(${options.image})`).css("background-position", options.backgroundPosition)
+	if(navigator.onLine){
+		root.style.setProperty('--color-1', `#${options.color1}`)
+		root.style.setProperty('--color-2', `#${options.color2}`)
+		if (options.image != '') $("body").css("background-image", `url(${options.image})`).css("background-position", options.backgroundPosition)
+	}
 
 	if (options.links.length > 0) {
 		let links = ''
@@ -28,7 +28,7 @@ function processSetting(options) {
 	if (options.grayScale) $('.twitter-inside').addClass('grayscale')
 
 	if (options.twitter == '' && !options.showHistory) $('#content').remove()
-	if (options.twitter != '') $('.twitter-timeline').attr("href", options.twitter).attr("data-link-color", `#${options.color1}`)
+	if (options.twitter != '' && navigator.onLine) $('.twitter-timeline').attr("href", options.twitter).attr("data-link-color", `#${options.color1}`)
 	if (options.showHistory) {
 		chrome.history.search({
 			text: '',
@@ -65,9 +65,9 @@ function processSetting(options) {
 		});
 	}
 
-	if (options.twitter != '' && !options.showHistory) $("#twitter, [target=twitter]").show()
+	if (options.twitter != '' && !options.showHistory && navigator.onLine) $("#twitter, [target=twitter]").show()
 	if (options.twitter == '' && options.showHistory) $("#history, [target=history]").show()
-	if (options.twitter != '' && options.showHistory) {
+	if (options.twitter != '' && options.showHistory && navigator.onLine) {
 		$("#twitter, .info a").show()
 		$(".info > a").click(e => {
 			$(".info > a").removeClass('active')

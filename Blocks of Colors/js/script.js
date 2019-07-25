@@ -11,35 +11,38 @@ function time() {
 function processSetting(options) {
 	let root = document.documentElement
 
-	root.style.setProperty('--color-1', `#${options.color1}`)
-	root.style.setProperty('--color-2', `#${options.color2}`)
-	root.style.setProperty('--color-3', `#${options.color3}`)
+	if(navigator.onLine) {
+		root.style.setProperty('--color-1', `#${options.color1}`)
+		root.style.setProperty('--color-2', `#${options.color2}`)
+		root.style.setProperty('--color-3', `#${options.color3}`)
+		if (options.image != '') $("#sidebar").css("background-image", `url(${options.image})`)
+		
+		if (options.showQuote) {
+			var settings = {
+				"crossDomain": true,
+				"url": "https://andruxnet-random-famous-quotes.p.rapidapi.com/?count=1&cat=movies",
+				"method": "POST",
+				"headers": {
+					"X-RapidAPI-Host": "andruxnet-random-famous-quotes.p.rapidapi.com",
+					"X-RapidAPI-Key": "c9ed88a6d7msh2bb16885ae42db6p18398djsn14a875b76406",
+					"Content-Type": "application/x-www-form-urlencoded"
+				},
+				"data": ""
+			}
+
+			$.ajax(settings).done(function (response) {
+				response.forEach(quote => {
+					$('#movie blockquote').text(quote.quote)
+					$('#movie source').text(quote.author)
+				});
+			});
+		} else $('#movie').hide()
+	} else $('#movie').hide()
 
 	$("#name").text(`Welcome${options.name != '' ? ', ' + options.name : ''}`)
-	if (options.image != '') $("#sidebar").css("background-image", `url(${options.image})`)
 	if (options.onlineStatus) {
 		$("#online").text(`You are ${navigator.onLine ? "online" : "offline"}!`)
 	}
-	if (options.showQuote) {
-		var settings = {
-			"crossDomain": true,
-			"url": "https://andruxnet-random-famous-quotes.p.rapidapi.com/?count=1&cat=movies",
-			"method": "POST",
-			"headers": {
-				"X-RapidAPI-Host": "andruxnet-random-famous-quotes.p.rapidapi.com",
-				"X-RapidAPI-Key": "c9ed88a6d7msh2bb16885ae42db6p18398djsn14a875b76406",
-				"Content-Type": "application/x-www-form-urlencoded"
-			},
-			"data": ""
-		}
-
-		$.ajax(settings).done(function (response) {
-			response.forEach(quote => {
-				$('#movie blockquote').text(quote.quote)
-				$('#movie source').text(quote.author)
-			});
-		});
-	} else $('#movie').hide()
 
 	if (options.links.length > 0) {
 		let links = ''
