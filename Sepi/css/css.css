@@ -69,6 +69,7 @@ a {
 
 #options h1 {
 	font-weight: bold;
+	border-bottom: 1px solid var(--color-2);
 	margin: 10px 0;
 	padding: 10px 0;
 }

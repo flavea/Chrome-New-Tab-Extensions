@@ -57,7 +57,7 @@ $(ready =>  {
         }
     }
 
-    $("#addLink").click(e => {
+    $(".addLink").click(e => {
         let link = $('.linkTemp').clone().removeClass('linkTemp').addClass('link')
         $('input', link).val('')
         $('legend', link).text(`Link ${$('#optLinks > .link').length + 1}`)

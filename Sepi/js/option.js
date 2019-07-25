@@ -45,7 +45,7 @@ $(ready =>  {
         }
     }
 
-    $("#addLink").click(e => {
+    $(".addLink").click(e => {
         if ($('#optLinks > .link').length < 16) {
             let link = $('.linkTemp').clone().removeClass('linkTemp').addClass('link')
             $('input', link).val('')
