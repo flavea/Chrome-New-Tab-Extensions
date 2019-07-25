@@ -16,6 +16,7 @@ function processSetting(options) {
 		root.style.setProperty('--color-2', `#${options.color2}`)
 		root.style.setProperty('--color-3', `#${options.color3}`)
 		if (options.image != '') $("#sidebar").css("background-image", `url(${options.image})`)
+		if (options.background != '') $("body").css("background-image", `url(${options.background})`)
 		
 		if (options.showQuote) {
 			var settings = {

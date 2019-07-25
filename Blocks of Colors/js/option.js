@@ -5,6 +5,7 @@ $(ready =>  {
 
         options.name = $("#name").val()
         options.image = $("#image").val()
+        options.background = $("#background").val()
         options.color1 = $("#color1").val()
         options.color2 = $("#color2").val()
         options.color3 = $("#color3").val()
@@ -31,6 +32,7 @@ $(ready =>  {
         $("#optLinks > .link").remove()
         $("#name").val(options.name)
         $("#image").val(options.image)
+        $("#background").val(options.background)
         $("#color1").val(options.color1)
         $("#color2").val(options.color2)
         $("#color3").val(options.color3)

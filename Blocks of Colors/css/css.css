@@ -33,7 +33,10 @@ html {
 }
 
 body {
-	background: url(../images/bg.png) center no-repeat var(--color-1);
+	background-image: url(../images/bg.png);
+	background-color: var(--color-1);
+	background-position: center;
+	background-repeat: no-repeat;
 	font-size: 22px;
 	color: var(--color-1);
 	font-family: 'VT323', monospace;

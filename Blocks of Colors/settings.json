@@ -2,6 +2,7 @@
     "HLROptions": {
         "name": "",
         "image": "../images/sb.jpg",
+        "background": "../images/bg.png",
         "color1": "FD1061",
         "color2": "3AC0EF",
         "color3": "E9CC80",
