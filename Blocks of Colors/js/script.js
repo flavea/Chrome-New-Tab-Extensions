@@ -53,6 +53,15 @@ function processSetting(options) {
 		$("#links").html(links)
 	}
 
+	if (options.links.length < 24) {
+		let links = ''
+		let sisa = 24 - options.links.length
+		for(let i = 0; i < sisa; i++) {
+			links += `<a><span></span></a>`
+		}
+		$("#links").append(links)
+	}
+
 	timeFormat = options.timeFormat
 	dateFormat = options.dateFormat
 
