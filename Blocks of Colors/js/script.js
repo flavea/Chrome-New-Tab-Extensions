@@ -4,8 +4,8 @@ var dateFormat = 1
 function time() {
 	if(timeFormat == 24) $('#header h1').html($.format.date(new Date(), "HH:mm:ss"))
 	else $('#header h1').html($.format.date(new Date(), "hh:mm a"))
-	if(dateFormat == 1) $('#header span').html($.format.date(new Date(), "ddd, MMMM D yyyy"))
-	else $('#header span').html($.format.date(new Date(), "ddd, dd MMMM yyyy"))
+	if(dateFormat == 1) $('#header div').html($.format.date(new Date(), "ddd, MMMM D yyyy"))
+	else $('#header div').html($.format.date(new Date(), "ddd, dd MMMM yyyy"))
 }
 
 function processSetting(options) {
